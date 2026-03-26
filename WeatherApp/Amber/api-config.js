@@ -7,7 +7,7 @@ const API_CONFIG = {
   // OpenWeatherMap API
   OPENWEATHER: {
     baseUrl: 'https://api.openweathermap.org/data/2.5',
-    apiKey: '466ddaa21a8de191e9f608bd11a56acb', // TODO: Move to .env in production
+    apiKey: window.ENV?.OPENWEATHER_API_KEY || '466ddaa21a8de191e9f608bd11a56acb', // Fallback to demo key
     endpoints: {
       current: '/weather',
       forecast: '/forecast'
@@ -21,7 +21,7 @@ const API_CONFIG = {
   // OpenCage Geocoding API
   OPENCAGE: {
     baseUrl: 'https://api.opencagedata.com/geocode/v1/json',
-    apiKey: '089943fd115440dbb4d95b091479e834', // TODO: Move to .env in production
+    apiKey: window.ENV?.OPENCAGE_API_KEY || '089943fd115440dbb4d95b091479e834', // Fallback to demo key
     params: {
       no_annotations: 1
     }

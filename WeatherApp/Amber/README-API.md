@@ -58,15 +58,29 @@ This weather app uses two main APIs:
 
 ## Configuration
 
-### For Development
-The API keys are currently hardcoded in `api-config.js`:
-- `API_CONFIG.OPENWEATHER.apiKey`
-- `API_CONFIG.OPENCAGE.apiKey`
+### For Development (Updated for static hosting)
+API keys now support environment variables with fallback to demo keys in `api-config.js`.
 
-### For Production
-1. Copy `.env.example` to `.env`
-2. Add your API keys to the `.env` file
-3. Update `api-config.js` to read from environment variables (requires backend/build process)
+**Quick Start (uses demo keys):**
+- No setup needed - works out of the box!
+
+**Custom Keys (recommended):**
+1. Copy `Amber/.env.example` to `Amber/.env`
+2. Fill in your API keys
+3. Uncomment and update the `<script>` block in `index.html`:
+   ```
+   <script>
+       window.ENV = {
+           OPENWEATHER_API_KEY: 'your_openweathermap_key',
+           OPENCAGE_API_KEY: 'your_opencage_key'
+       };
+   </script>
+   ```
+4. Save and reload
+
+### Get API Keys:
+- **OpenWeatherMap**: [openweathermap.org/api](https://openweathermap.org/api) (free tier: 60 calls/min)
+- **OpenCage**: [opencagedata.com/api](https://opencagedata.com/api) (free: 2500 req/day)
 
 ## File Structure
 
