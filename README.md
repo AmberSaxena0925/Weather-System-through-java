@@ -1,5 +1,3 @@
-#Weather App
-
 ## WeatherApp
 
 ### Overview
