@@ -10,7 +10,7 @@ Student project with two variants: Aarush (basic) and Amber (advanced).
 ### Quick Setup & Run (Amber)
 1. `cd WeatherApp/Amber`
 2. **Uses demo API keys** - works immediately!
-3. Run: `npx live-server` (opens browser at http://127.0.0.1:8080)
+3. Run: `npx live-server` (opens browser at http://127.0.0.1:3000)
    - Search cities, use location button, view 24h forecast chart.
 
 **Custom API keys** (optional):
